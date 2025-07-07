@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Register a course</title>
+    <style>
+      body {
+    background: url("7518939.jpg") no-repeat center center fixed;
+    background-size: cover;
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin-top: 50px;
+}
+
+
+        h1 {
+            color: royalblue;
+        }
+
+        form {
+            background-color: white;
+            padding: 40px;
+            border-radius: 10px;
+            display: inline-block;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+        }
+
+        label {
+            display: block;
+            margin-top: 15px;
+            font-weight: bold;
+        }
+
+        input, select {
+            width: 300px;
+            padding: 12px;
+            margin-top: 8px;
+            border: 2px solid #ccc;
+            border-radius: 6px;
+            font-size: 16px;
+            transition: 0.3s ease;
+        }
+
+        input:focus, select:focus {
+            border-color: #66ccff;
+            outline: none;
+            box-shadow: 0 0 5px #66ccff;
+        }
+
+        button {
+            margin-top: 25px;
+            padding: 15px 30px;
+            background-color: #ff5733;
+            color: white;
+            border: none;
+            border-radius: 6px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #c70039;
+        }
+    </style>
+</head>
+<body>
+    <h1>Kickstart with an exciting course!</h1>
+    <form action="http://localhost:8080/courses/register" method="post">
+        <label for="name">Enter your name:</label>
+        <input type="text" id="name" name="name">
+
+        <label for="emailid">Enter your emailid:</label>
+        <input type="email" id="emailid" name="emailId">
+
+        <label for="coursename">Choose a Course:</label>
+        <select id="coursename" name="coursename">
+            <option value="Java Essentials">Java Essentials</option>
+            <option value="Python for ML">Python for ML</option>
+            <option value="Spring Boot">Spring Boot</option>
+        </select>
+
+        <br>
+        <button type="submit">SUBMIT</button>
+    </form>
+</body>
+</html>

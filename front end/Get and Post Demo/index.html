@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Course Registration System</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: url('https://media.giphy.com/media/kHziGf54dBzGxU4iWX/giphy.gif') no-repeat center center fixed;
+      background-size: cover;
+      color: #f0f0f5;
+    }
+    .overlay {
+      background-color: rgba(0,0,0,0.6);
+      min-height: 100vh;
+      text-align: center;
+      padding-top: 100px;
+    }
+    h1 {
+      font-size: 3em;
+      margin-bottom: 50px;
+      letter-spacing: 2px;
+      color: #00e6e6;
+    }
+    .btn-container {
+      display: inline-block;
+    }
+    a.button {
+      display: inline-block;
+      margin: 10px;
+      padding: 20px 40px;
+      font-size: 18px;
+      color: white;
+      text-decoration: none;
+      border: 2px solid #00e6e6;
+      border-radius: 8px;
+      background: linear-gradient(to bottom, #00e6e6, #008080);
+      transition: background 0.3s, transform 0.2s;
+    }
+    a.button:hover {
+      background: linear-gradient(to bottom, #008080, #005050);
+      transform: translateY(-2px);
+    }
+    @media (max-width: 600px) {
+      h1 { font-size: 2em; }
+      a.button { font-size: 16px; padding: 15px 30px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="overlay">
+    <h1>DHANAPRIYAN ODA WEBSITE</h1>
+    <div class="btn-container">
+      <a class="button" href="register.html">Register a Course</a>
+      <a class="button" href="availablecourses.html">Available Course</a>
+      <a class="button" href="enrolled.html">Enrolled Students</a>
+    </div>
+  </div>
+</body>
+</html>
