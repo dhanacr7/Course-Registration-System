@@ -1,31 +1,68 @@
-    <!DOCTYPE html>
-    <html>
-    <head>
-        
-        <script type="text/javascript" src="myscript.js"></script>
-    </head>
-    <body>
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>Available Courses</title>
+    <script type="text/javascript" src="myscript.js"></script>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: url('https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1470&q=80') no-repeat center center fixed;
+            background-size: cover;
+        }
 
-        <table align="center" border="1">
-            <tr align="center" style="background-color: lightblue;">
-                <th width="100">Course Id</th>
-                <th width="150">Course Name</th>
-                <th width="150">trainer</th>
-                <th width="140">Duration in weeks</th>
-            </tr>
+        table {
+            background-color: rgba(255, 255, 255, 0.85); /* light background with transparency */
+            margin: 80px auto;
+            border-collapse: collapse;
+            box-shadow: 0 0 20px rgba(0,0,0,0.4);
+        }
 
-            <tbody align="center" id="coursetable">
-                </tbody>
-        </table>
+        th, td {
+            padding: 15px;
+            font-size: 16px;
+        }
 
-        <script type="text/javascript">
-            window.onload = function() {
-                showCourses();
-            };
-        </script>
-        <style>
-       
+        th {
+            background-color: #007BFF;
+            color: white;
+        }
+
+        tr:nth-child(even) td {
+            background-color: #f2f2f2;
+        }
+
+        tr:nth-child(odd) td {
+            background-color: #ffffff;
+        }
+
+        @media (max-width: 768px) {
+            th, td {
+                font-size: 14px;
+                padding: 10px;
+            }
+        }
     </style>
+</head>
+<body>
 
-    </body>
-    </html>
+    <table border="1">
+        <tr align="center">
+            <th width="100">Course Id</th>
+            <th width="150">Course Name</th>
+            <th width="150">Trainer</th>
+            <th width="140">Duration (weeks)</th>
+        </tr>
+        <tbody align="center" id="coursetable">
+        </tbody>
+    </table>
+
+    <script type="text/javascript">
+        window.onload = function () {
+            showCourses();
+        };
+    </script>
+
+</body>
+</html>

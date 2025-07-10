@@ -1,26 +1,67 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <meta charset="UTF-8">
+    <title>Enrolled Students</title>
     <script type="text/javascript" src="myscript.js"></script>
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: url('https://images.unsplash.com/photo-1521791136064-7986c2920216?auto=format&fit=crop&w=1470&q=80') no-repeat center center fixed;
+            background-size: cover;
+        }
+
+        table {
+            background-color: rgba(255, 255, 255, 0.9); /* light bg with opacity */
+            margin: 80px auto;
+            border-collapse: collapse;
+            box-shadow: 0 0 20px rgba(0,0,0,0.4);
+        }
+
+        th, td {
+            padding: 15px;
+            font-size: 16px;
+        }
+
+        th {
+            background-color: #28a745;
+            color: white;
+        }
+
+        tr:nth-child(even) td {
+            background-color: #f2f2f2;
+        }
+
+        tr:nth-child(odd) td {
+            background-color: #ffffff;
+        }
+
+        @media (max-width: 768px) {
+            th, td {
+                font-size: 14px;
+                padding: 10px;
+            }
+        }
+    </style>
 </head>
 <body>
 
-    <table align="center" border="1">
-        <tr align="center" style="background-color: lightblue;">
+    <table border="1">
+        <tr align="center">
             <th width="100">Name</th>
             <th width="200">Email ID</th>
             <th width="150">Course Name</th>
         </tr>
-
         <tbody align="center" id="enrolledtable">
         </tbody>
     </table>
 
     <script type="text/javascript">
-        window.onload = function() {
+        window.onload = function () {
             showenrolledstudents();
         };
     </script>
-           
+
 </body>
 </html>

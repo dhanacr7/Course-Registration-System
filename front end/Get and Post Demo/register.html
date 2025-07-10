@@ -1,86 +1,106 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Register a course</title>
-    <style>
-      body {
-    background: url("7518939.jpg") no-repeat center center fixed;
-    background-size: cover;
-    font-family: Arial, sans-serif;
-    text-align: center;
-    margin-top: 50px;
-}
+  <title>Register a Course</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: url("https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=1470&q=80") no-repeat center center fixed;
+      background-size: cover;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-start;
+      min-height: 100vh;
+      padding-top: 60px;
+    }
 
+    h1 {
+      color: #ffffff;
+      text-shadow: 2px 2px 4px rgba(0,0,0,0.8);
+      margin-bottom: 30px;
+    }
 
-        h1 {
-            color: royalblue;
-        }
+    form {
+      background: rgba(0, 0, 0, 0.7); /* DARK TRANSPARENT */
+      backdrop-filter: blur(8px);
+      -webkit-backdrop-filter: blur(8px);
+      padding: 40px;
+      border-radius: 16px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6);
+      width: 90%;
+      max-width: 420px;
+    }
 
-        form {
-            background-color: white;
-            padding: 40px;
-            border-radius: 10px;
-            display: inline-block;
-            box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
-        }
+    label {
+      display: block;
+      margin-top: 15px;
+      font-weight: bold;
+      color: #f2f2f2;
+      text-align: left;
+    }
 
-        label {
-            display: block;
-            margin-top: 15px;
-            font-weight: bold;
-        }
+    input, select {
+      width: 100%;
+      padding: 12px;
+      margin-top: 8px;
+      border: 1px solid #555;
+      border-radius: 6px;
+      font-size: 16px;
+      background-color: #1a1a1a;
+      color: #fff;
+    }
 
-        input, select {
-            width: 300px;
-            padding: 12px;
-            margin-top: 8px;
-            border: 2px solid #ccc;
-            border-radius: 6px;
-            font-size: 16px;
-            transition: 0.3s ease;
-        }
+    input:focus, select:focus {
+      border-color: #00ccff;
+      outline: none;
+      box-shadow: 0 0 6px #00ccff;
+    }
 
-        input:focus, select:focus {
-            border-color: #66ccff;
-            outline: none;
-            box-shadow: 0 0 5px #66ccff;
-        }
+    button {
+      margin-top: 25px;
+      padding: 14px;
+      background-color: #00cc99;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      font-size: 16px;
+      font-weight: bold;
+      cursor: pointer;
+      width: 100%;
+      transition: background-color 0.3s ease;
+    }
 
-        button {
-            margin-top: 25px;
-            padding: 15px 30px;
-            background-color: #ff5733;
-            color: white;
-            border: none;
-            border-radius: 6px;
-            font-size: 16px;
-            cursor: pointer;
-            transition: background-color 0.3s ease;
-        }
+    button:hover {
+      background-color: #009973;
+    }
 
-        button:hover {
-            background-color: #c70039;
-        }
-    </style>
+    @media (max-width: 480px) {
+      form {
+        padding: 30px 20px;
+      }
+    }
+  </style>
 </head>
 <body>
-    <h1>Kickstart with an exciting course!</h1>
-    <form action="http://localhost:8080/courses/register" method="post">
-        <label for="name">Enter your name:</label>
-        <input type="text" id="name" name="name">
+  <h1>Kickstart with an exciting course!</h1>
+  <form action="http://localhost:8080/courses/register" method="post">
+    <label for="name">Enter your name:</label>
+    <input type="text" id="name" name="name" required />
 
-        <label for="emailid">Enter your emailid:</label>
-        <input type="email" id="emailid" name="emailId">
+    <label for="emailid">Enter your emailid:</label>
+    <input type="email" id="emailid" name="emailId" required />
 
-        <label for="coursename">Choose a Course:</label>
-        <select id="coursename" name="coursename">
-            <option value="Java Essentials">Java Essentials</option>
-            <option value="Python for ML">Python for ML</option>
-            <option value="Spring Boot">Spring Boot</option>
-        </select>
+    <label for="coursename">Choose a Course:</label>
+    <select id="coursename" name="coursename" required>
+      <option value="">-- Select Course --</option>
+      <option value="Java Essentials">Java Essentials</option>
+      <option value="Python for ML">Python for ML</option>
+      <option value="Spring Boot">Spring Boot</option>
+    </select>
 
-        <br>
-        <button type="submit">SUBMIT</button>
-    </form>
+    <button type="submit">SUBMIT</button>
+  </form>
 </body>
 </html>
